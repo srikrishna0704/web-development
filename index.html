@@ -10,6 +10,7 @@
           color:red;
       }
     </style>
+    <script src="/index.js" ></script>
   </head>
   <body>
     <!-- <h1 class='h1-1'>Hello, World!</h1>
@@ -22,11 +23,11 @@
         <a href="#">github</a>
         <a href="#">codechef</a>
     </div>
-    <div class="card">
+    <div class="card" id='card'>
         <img src="john.png" alt="image card">
-        <h2>Chaitanya</h2>
-        <p>male</p>
-        <button>Toggle User</button>
+        <h2 id='user'>john</h2>
+        <p >male</p>
+        <button onclick="toggleUser()">Toggle User</button>
         <br>
         <br>
         <button>random user</button>
