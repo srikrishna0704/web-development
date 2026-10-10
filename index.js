@@ -25,3 +25,20 @@ const toggleUser = () => {
          <br><br>
          <button>Random User</button>`;
 };
+
+const randomUser = () => {
+    fetch('https://randomuser.me/api/')
+    .then(function(rawdata) {
+        return rawdata.json();
+    }).then(function(jsondata){
+        const user=jsondata.results[0];
+        document.getElementById("card").innerHTML =
+            `<img src="${user.picture.large}" alt="User Image">
+             <h2>${user.name.title} ${user.name.first} ${user.name.first} </h2>
+             <p> ${user.gender}</p>
+             <button onclick="toggleUser()">Toggle User</button>
+             <br><br>
+             <button onclick="randomUser()">Random User</button>`
+        
+    });
+}
